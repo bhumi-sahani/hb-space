@@ -10,7 +10,29 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+coverage
 *.local
+
+# Environment files: secrets never belong in git (.env.example is the only exception)
+.env
+.env.*
+!.env.example
+
+# Local secrets and key material
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+secrets/
+supabase/.temp/
+supabase/.branches/
+.netlify/
+
+# Media fixtures must never be real personal photos/videos
+test-fixtures/private/
+**/__private_fixtures__/
 
 # Editor directories and files
 .vscode/*
